@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{C9CF587B-4C5F-4C5F-A976-6552F04666F7}</ProjectGuid>
+    <RootNamespace>SeNet</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>NetCore</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>PGOptimize</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\bin\</OutDir>
+    <IntDir>..\obj\SeNet\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>.\;..\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="common\Assertx.cpp" />
+    <ClCompile Include="common\cityhash\city.cc" />
+    <ClCompile Include="common\CommonDefines.cpp" />
+    <ClCompile Include="common\JsonConfig.cpp" />
+    <ClCompile Include="common\jsoncpp.cpp" />
+    <ClCompile Include="common\LogUtil.cpp" />
+    <ClCompile Include="common\SePlatForm.cpp" />
+    <ClCompile Include="common\ThreadBase.cpp" />
+    <ClCompile Include="common\ThreadPool.cpp" />
+    <ClCompile Include="http\http_client.cpp" />
+    <ClCompile Include="http\http_server.cpp" />
+    <ClCompile Include="http\mongoose.c" />
+    <ClCompile Include="SeEpoll.cpp" />
+    <ClCompile Include="SeFClientBase.cpp" />
+    <ClCompile Include="SeFINet.cpp" />
+    <ClCompile Include="SeFNet.cpp" />
+    <ClCompile Include="SeFNetClient.cpp" />
+    <ClCompile Include="SeFNodeNet.pb.cc" />
+    <ClCompile Include="SeFServerBase.cpp" />
+    <ClCompile Include="SeIOCP.cpp" />
+    <ClCompile Include="SeKqueue.cpp" />
+    <ClCompile Include="SeNet.cpp" />
+    <ClCompile Include="SeSelect.cpp" />
+    <ClCompile Include="Session.cpp" />
+    <ClCompile Include="Socket.cpp" />
+    <ClCompile Include="SocketBuffer.cpp" />
+    <ClCompile Include="SocketDefine.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="common\Assertx.h" />
+    <ClInclude Include="common\blockingconcurrentqueue.h" />
+    <ClInclude Include="common\BlockQueue.hpp" />
+    <ClInclude Include="common\cityhash\city.h" />
+    <ClInclude Include="common\cityhash\citycrc.h" />
+    <ClInclude Include="common\CommonDefines.h" />
+    <ClInclude Include="common\concurrentqueue.h" />
+    <ClInclude Include="common\ConcurrentQueue.hpp" />
+    <ClInclude Include="common\ConsistentHash.hpp" />
+    <ClInclude Include="common\json.h" />
+    <ClInclude Include="common\JsonConfig.h" />
+    <ClInclude Include="common\lexical_cast.hpp" />
+    <ClInclude Include="common\Lock.hpp" />
+    <ClInclude Include="common\LogUtil.h" />
+    <ClInclude Include="common\MapEx.hpp" />
+    <ClInclude Include="common\MemPool.hpp" />
+    <ClInclude Include="common\Random.hpp" />
+    <ClInclude Include="common\SePlatForm.h" />
+    <ClInclude Include="common\SingleTon.hpp" />
+    <ClInclude Include="common\ThreadBase.h" />
+    <ClInclude Include="common\ThreadPool.h" />
+    <ClInclude Include="http\http_client.h" />
+    <ClInclude Include="http\http_server.h" />
+    <ClInclude Include="http\mongoose.h" />
+    <ClInclude Include="SeEpoll.h" />
+    <ClInclude Include="SeFClientBase.h" />
+    <ClInclude Include="SeFINet.h" />
+    <ClInclude Include="SeFNet.h" />
+    <ClInclude Include="SeFNetClient.h" />
+    <ClInclude Include="SeFNodeNet.pb.h" />
+    <ClInclude Include="SeFServerBase.h" />
+    <ClInclude Include="SeIOCP.h" />
+    <ClInclude Include="SeKqueue.h" />
+    <ClInclude Include="SeNet.h" />
+    <ClInclude Include="SeSelect.h" />
+    <ClInclude Include="Session.h" />
+    <ClInclude Include="Socket.h" />
+    <ClInclude Include="SocketBuffer.h" />
+    <ClInclude Include="SocketDefine.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SeFNodeNet.proto" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
